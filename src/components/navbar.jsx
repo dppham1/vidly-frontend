@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Link, NavLink } from "react-router-dom";
+import logo from "../logo.png";
 
 const NavBar = ({ user }) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">
-          Vidly
+          <img src={logo} alt="Vidly" style={{ width: 70, height: 70 }} />
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav">
