@@ -8,6 +8,7 @@ class MovieForm extends Form {
   state = {
     data: {
       title: "",
+      imageUrl: "",
       genreId: "",
       numberInStock: "",
       dailyRentalRate: "",
@@ -60,6 +61,7 @@ class MovieForm extends Form {
     return {
       _id: movie._id,
       title: movie.title,
+      imageUrl: movie.imageUrl,
       genreId: movie.genre._id,
       numberInStock: movie.numberInStock,
       dailyRentalRate: movie.dailyRentalRate,
@@ -74,8 +76,8 @@ class MovieForm extends Form {
   render() {
     return (
       <div>
-        <h1>Movie Form</h1>
         <form onSubmit={this.handleSubmit}>
+          {this.renderImage(this.state.data.imageUrl)}
           {this.renderInput("title", "Title")}
           {this.renderSelect("genreId", "Genre", this.state.genres)}
           {this.renderInput("numberInStock", "Number in Stock", "number")}

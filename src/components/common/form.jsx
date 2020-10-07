@@ -74,6 +74,23 @@ class Form extends Component {
     );
   }
 
+  renderImage(imageUrl) {
+    return (
+      <img
+        src={imageUrl}
+        style={{
+          width: "auto",
+          height: "auto",
+          paddingBottom: 10,
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+          width: "50%",
+        }}
+      ></img>
+    );
+  }
+
   renderSelect(name, label, options) {
     const { data, errors } = this.state;
 
